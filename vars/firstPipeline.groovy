@@ -32,6 +32,12 @@ def call(Map pipelineParams) {
                 }
             }
 
+            stage('Sonar') {
+                steps {
+                    echo "****** Running sonar scans for ${env.APPLICATION_NAME} application ******"
+                }
+            }
+
             stage('Test') {
                 steps {
                     echo "****** Testing the ${env.APPLICATION_NAME} application ******"
