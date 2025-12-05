@@ -1,6 +1,6 @@
 import com.i27academy.builds.Calculator
 
-call(Map pipelineParams) {
+def call(Map pipelineParams) {
     Calculator calculator = new Calculator(this)
     pipeline {
     agent {
@@ -44,3 +44,4 @@ call(Map pipelineParams) {
         }
     }}
 }
+
